@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f2e7e5, #f0c3bd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-wrapper {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    border-radius: 15px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.login-left {
+    width: 40%;
+    background: linear-gradient(135deg, #663399, #d8bfd8);
+    padding: 50px 30px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-left img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-right {
+    width: 60%;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4B0082;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label i {
+    margin-right: 5px;
+}
+
+.btn-login {
+    background-color: #4B0082;
+    border: none;
+    font-weight: bold;
+}
+
+.login-right .login-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-right .login-footer a {
+    color: #4B0082;
+    text-decoration: none;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-register {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.forgot-register p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .login-wrapper {
+        flex-direction: column;
+    }
+
+    .login-left,
+    .login-right {
+        width: 100%;
+    }
+
+    .forgot-register {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .forgot-register p {
+        margin-bottom: 10px;
+    }
+}
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <title>Zwallet - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css"> </head>
+
+    <body>
+      <div class="login-wrapper">
+          <div class="login-left">
+              <img src="/Zwallet/assets/img/logopo.png" alt="Zwallet Logo"> 
+              <h2>Welcome to Zwallet</h2>
+              <p>Securely manage your finances with ease.</p>
+          </div>
+          <div class="login-right">
+              <h2 class="login-title">Login</h2>
+              <form id="loginForm">
+                  <div class="form-group">
+                      <label for="username"><i class="fas fa-user"></i> Username</label>
+                      <input type="text" id="username" class="form-control" placeholder="Enter your username" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password"><i class="fas fa-lock"></i> Password</label>
+                      <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                  </div>
+                  <div id="error-message" class="error-message"></div>
+                  <button type="submit" class="btn btn-primary btn-block btn-login">Login</button>
+              </form>
+              <div class="forgot-register">
+                  <p class="forgot-password">
+                      Forgot <a href="/Zwallet/pages/forgotpassword.html">password?</a>
+                  </p>
+                  <p class="register">
+                      New to this? <a href="/Zwallet/pages/register.html">Add a new account</a>
+                  </p>
+              </div>
+          </div>
+      </div>
+  
+      <script src="../assets/js/core/jquery.min.js"></script>
+      <script src="../assets/js/core/popper.min.js"></script>
+      <script src="../assets/js/core/bootstrap.min.js"></script>
+      <script src="../assets/js/login.js"></script>
+  </body>
+
+</html>
