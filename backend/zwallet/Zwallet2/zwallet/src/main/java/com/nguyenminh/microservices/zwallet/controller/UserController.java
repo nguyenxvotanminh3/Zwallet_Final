@@ -85,15 +85,13 @@ public class UserController {
 
     @GetMapping("/{name}/profileImage")
     public ResponseEntity<byte[]> getProfileImage(@PathVariable String name) {
-        String imagePath = Arrays.toString(userModelService.getProfileImage(name));
-        Path path = Paths.get(imagePath);
-        byte[] imageBytes;
         try {
-            imageBytes = Files.readAllBytes(path);
-            String contentType = Files.probeContentType(path);
-            return ResponseEntity.ok().contentType(MediaType.parseMediaType(contentType)).body(imageBytes);
+            byte[] imageBytes = userModelService.getProfileImage(name);
+            return ResponseEntity.ok()
+                    .contentType(MediaType.IMAGE_JPEG) // Chọn loại nội dung phù hợp với ảnh
+                    .body(imageBytes);
         } catch (IOException e) {
-            throw new RuntimeException("Failed to read image file", e);
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 
