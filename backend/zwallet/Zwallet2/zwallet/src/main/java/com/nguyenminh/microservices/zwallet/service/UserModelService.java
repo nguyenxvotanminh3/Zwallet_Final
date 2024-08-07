@@ -22,7 +22,7 @@ import java.util.*;
 @RequiredArgsConstructor
 @Service
 public class UserModelService {
-
+    private final Path uploadDir = Paths.get("uploads");
     private final UserRepository userRepository;
     private final TransactionHistoryRepository transactionHistoryRepository;
 
@@ -149,7 +149,7 @@ public class UserModelService {
                     .emailAddress(userModel.getEmailAddress())
                     .fullName(userModel.getFullName())
                     .totalAmount(userModel.getTotalAmount())
-
+                    .profileImage(userModel.getProfileImage())
                     .transactionHistoryResponses(transactionHistories.stream().map(this::mapToTransactionResponse).toList())
                     .build();
         } else {
@@ -220,8 +220,18 @@ public class UserModelService {
         Files.write(imagePath, imageBytes);
     }
 
-    public byte[] getProfileImage(String name) {
+    public byte[] getProfileImage(String name) throws IOException {
         UserModel user = userRepository.findByUserName(name);
-        return user.getProfileImage();
+        if (user == null || user.getProfileImage() == null) {
+            throw new IllegalArgumentException("User not found or image not set");
+        }
+
+        String imageFileName = new String(user.getProfileImage()); // Chuyển byte array về tên file
+        Path imagePath = uploadDir.resolve(imageFileName);
+        if (Files.exists(imagePath)) {
+            return Files.readAllBytes(imagePath);
+        } else {
+            throw new IOException("File not found: " + imageFileName);
+        }
     }
 }
