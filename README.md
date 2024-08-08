@@ -42,6 +42,12 @@ Zwallet is a powerful and intuitive web application designed to help you take fu
 
 We welcome contributions from the community! If you have any ideas, bug reports, or improvements, feel free to create a Pull Request or issue on GitHub.
 
+
+
+https://github.com/user-attachments/assets/3a8dc978-df60-4abc-b526-fb6e9942b7b2
+
+
+
 ## License
 
 Zwallet is released under the MIT License. See the `LICENSE` file for details.
