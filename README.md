@@ -41,6 +41,7 @@ Zwallet is a powerful and intuitive web application designed to help you take fu
 ## Contributing
 
 We welcome contributions from the community! If you have any ideas, bug reports, or improvements, feel free to create a Pull Request or issue on GitHub.
+Below is the demo video of this project : 
 
 
 
