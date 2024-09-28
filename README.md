@@ -16,6 +16,9 @@ Zwallet is a powerful and intuitive web application designed to help you take fu
 * **Detailed Analytics:**  Access detailed reports on your income, spending by category, time period, and other customizable criteria.
 * [![image](https://github.com/user-attachments/assets/7739224d-2b23-4d35-aa7f-10b7ac394928)
 
+* **Money Conversion**
+* ![image](https://github.com/user-attachments/assets/c1595ba6-362b-4c26-9f6b-4ccf664e3931)
+
 
 ## Technologies Used
 
