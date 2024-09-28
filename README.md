@@ -20,7 +20,8 @@ Zwallet is a powerful and intuitive web application designed to help you take fu
 * ![image](https://github.com/user-attachments/assets/c1595ba6-362b-4c26-9f6b-4ccf664e3931)
   
 * **Customize your color**
-![image](https://github.com/user-attachments/assets/ca3696fa-e5b8-4181-909c-20defb71110f)
+* ![image](https://github.com/user-attachments/assets/ca3696fa-e5b8-4181-909c-20defb71110f)
+
 
 ## Technologies Used
 
