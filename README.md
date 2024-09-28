@@ -7,7 +7,8 @@ Zwallet is a powerful and intuitive web application designed to help you take fu
 ## Key Features
 
 * **Intuitive Dashboard:** Get a comprehensive overview of your accounts, recent transactions, and essential financial information at a glance.
-[![image](https://github.com/user-attachments/assets/8df95d70-6978-4d64-b337-6f98943bbcce)]
+![image](https://github.com/user-attachments/assets/f31483d2-3c36-41bb-b725-889a308fec7c)
+
 * **Account Management:** Easily add, edit, and delete accounts. Monitor balances and transaction history for each account.
 [![image](https://github.com/user-attachments/assets/c1795b25-43ae-4d7e-949f-5ad5054bb5de)]
 )
